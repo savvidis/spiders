@@ -5,7 +5,58 @@
 
 from scrapy.item import Item, Field
 
-class hacker_newsItem(Item):
-    # define the fields for your item here like:
-    name = Field()
 
+class PropertiesItem(Item):
+    # Primary fields
+    unique_id = Field()
+    title = Field()
+    price_num = Field()
+    description = Field()
+    region = Field(default='null')
+    city = Field(default='null')
+    neighborhood = Field(default='null')
+    address = Field(default='null')
+    img_url = Field()
+    on_site_date = Field()
+    views_num = Field()
+    construction_year_num = Field()
+    category = Field()
+
+    # Calculated fields
+    asset_type = Field()  # real estate or car
+    transaction_type = Field()  # commercial or auction
+    updated_date = Field()  # update date as date
+    last_update_num = Field()  # update date as duration
+    latitude = Field()
+    longitude = Field()
+    # Commercial sites
+
+    # Auction specic
+    debtor_name = Field()
+    auctioneer_name = Field()
+    auction_date = Field()
+    auction_number = Field()
+
+    # Real estate specific
+    property_area_num = Field()
+    property_rooms_num = Field()
+    property_buy_or_rent = Field()
+
+    # Car specific
+    car_kms_num = Field()
+    car_cc_num = Field()
+    car_fuel = Field()
+
+    # Contact fields
+    contact_legal_name = Field()
+    contact_name = Field()
+    contact_phone = Field()
+    contact_mobile = Field()
+    contact_email = Field()
+    contact_website = Field()
+
+    # Housekeeping fields
+    url = Field()
+    spider = Field()
+    source = Field()
+    imported_date = Field()

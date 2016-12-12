@@ -16,38 +16,62 @@ from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
 from scrapy.loader import ItemLoader
 
-
+from scrapy.http import Request
 from hacker_news.items import *
 from misc.log import *
 from misc.spider import CommonSpider
 from scrapy.loader.processors import MapCompose, Join
 
 
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy import exists
-
-
-class hacker_newsSpider(CommonSpider):
-    name = "hacker_news"
+class Airbnb(CommonSpider):
+    name = "airbnb"
     allowed_domains = ["capital.gr"]
     start_urls = [
         "http://realestate.capital.gr/properties/search-results.html",
-        # "http://realestate.capital.gr/",
     ]
+    # To see my settings only once
 
-    # Rules for horizontal and vertical crawling
-    rules = (
-        Rule(LinkExtractor(
-            restrict_xpaths='//*[@id="controller_area"]/ul/li[2]/a')),
-        Rule(LinkExtractor(
-            restrict_xpaths='//*[@class="title"]/a'), callback='parse_item'),
-    )
+    # def __init__(self, *args, **kwargs):
+    #     super(CrawlSpider, self).__init__(*args, **kwargs)()
+    #     print("Existing settings:")
+    #     for k in self.settings.attributes.keys():
+    #         print(k, self.settings.attributes[k])
+
+    # My settings
+    def parse(self, response):
+        # Find total number of pages
+        url_first_part = "http://realestate.capital.gr/properties/search-results/"
+        last_page_number = int(response
+                               .xpath('//*[@class="transit"]/span[2]/text()')
+                               # .extract()[0] - > not need re does it
+                               .re('[0-9]+')[0]
+                               )
+        print(last_page_number)
+        if last_page_number < 1:
+            print("last < 1")
+            # abort the search if there are no results
+            return
+        else:
+            # otherwise loop over all pages and scrape!
+            page_urls = [url_first_part + "index" +
+                         str(pageNumber) + ".html" for pageNumber in range(1, last_page_number + 1)]
+            for page_url in page_urls:
+                print(page_url)
+                yield Request(page_url, callback=self.parse_listing_results_page)
+
+    def parse_listing_results_page(self, response):
+        # Get item URLs and yield Requests
+        page_urls = response.xpath('//*[@class="title"]/a/@href')
+        for url in page_urls.extract():
+            print("Starting -- > ", url)
+            yield Request(urlparse.urljoin(response.url, url),
+                          callback=self.parse_item)
 
     def parse_item(self, response):
         """ This function parses a property page.
         @url http://realestate.capital.gr/properties/homes/diamerisma-148-0tm.-168504.html
         @returns items 1
-        @scrapes title price description area address 
+        @scrapes title price description area address
         @scrapes url project spider server date
         """
         print("Looking", response.url)

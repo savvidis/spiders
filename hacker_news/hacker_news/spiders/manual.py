@@ -16,38 +16,44 @@ from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
 from scrapy.loader import ItemLoader
 
-
+from scrapy.http import Request
 from hacker_news.items import *
 from misc.log import *
 from misc.spider import CommonSpider
 from scrapy.loader.processors import MapCompose, Join
 
 
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy import exists
-
-
-class hacker_newsSpider(CommonSpider):
-    name = "hacker_news"
+class manual(CommonSpider):
+    name = "manual"
     allowed_domains = ["capital.gr"]
     start_urls = [
         "http://realestate.capital.gr/properties/search-results.html",
-        # "http://realestate.capital.gr/",
     ]
 
-    # Rules for horizontal and vertical crawling
-    rules = (
-        Rule(LinkExtractor(
-            restrict_xpaths='//*[@id="controller_area"]/ul/li[2]/a')),
-        Rule(LinkExtractor(
-            restrict_xpaths='//*[@class="title"]/a'), callback='parse_item'),
-    )
+    def parse(self, response):
+        print("Existing settings:")
+        for k in self.settings.attributes.keys():
+            print(k, self.settings.attributes[k])
+        # My settings
+        # Get the next index URLs and yield Requests
+        next_selector = response.xpath(
+            '//*[@id="controller_area"]/ul/li[2]/a/@href')
+        for url in next_selector.extract():
+            print("Next -- > ", url)
+            yield Request(urlparse.urljoin(response.url, url))
+
+        # Get item URLs and yield Requests
+        item_selector = response.xpath('//*[@class="title"]/a/@href')
+        for url in item_selector.extract():
+            print("Starting -- > ", url)
+            yield Request(urlparse.urljoin(response.url, url),
+                          callback=self.parse_item)
 
     def parse_item(self, response):
         """ This function parses a property page.
         @url http://realestate.capital.gr/properties/homes/diamerisma-148-0tm.-168504.html
         @returns items 1
-        @scrapes title price description area address 
+        @scrapes title price description area address
         @scrapes url project spider server date
         """
         print("Looking", response.url)

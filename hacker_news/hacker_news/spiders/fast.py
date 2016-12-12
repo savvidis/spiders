@@ -16,34 +16,42 @@ from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
 from scrapy.loader import ItemLoader
 
-
+from scrapy.http import Request
 from hacker_news.items import *
 from misc.log import *
 from misc.spider import CommonSpider
 from scrapy.loader.processors import MapCompose, Join
 
 
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy import exists
-
-
-class hacker_newsSpider(CommonSpider):
-    name = "hacker_news"
+class fast(CommonSpider):
+    name = "fast"
     allowed_domains = ["capital.gr"]
     start_urls = [
         "http://realestate.capital.gr/properties/search-results.html",
-        # "http://realestate.capital.gr/",
     ]
 
-    # Rules for horizontal and vertical crawling
-    rules = (
-        Rule(LinkExtractor(
-            restrict_xpaths='//*[@id="controller_area"]/ul/li[2]/a')),
-        Rule(LinkExtractor(
-            restrict_xpaths='//*[@class="title"]/a'), callback='parse_item'),
-    )
+    def parse(self, response):
+        # My settings
+        # print("Existing settings: %s" % self.settings.attributes.keys())
+        # Get the next index URLs and yield Requests
+        next_selector = response.xpath(
+            '//*[@id="controller_area"]/ul/li[2]/a/@href')
+        for url in next_selector.extract():
+            print("Next -- > ", url)
+            yield Request(urlparse.urljoin(response.url, url))
 
-    def parse_item(self, response):
+        # Get item URLs and yield Requests
+        item_selector = response.xpath('//*[@class="title"]/a/@href')
+        for url in item_selector.extract():
+            print("Starting -- > ", url)
+            yield Request(urlparse.urljoin(response.url, url))
+        selectors = response.xpath(
+            '//*[@id="area_listing"]')
+        for selector in selectors:
+            print("Selector -- > ", selector)
+            yield self.parse_item(selector, response)
+
+    def parse_item(self, selector, response):
         """ This function parses a property page.
         @url http://realestate.capital.gr/properties/homes/diamerisma-148-0tm.-168504.html
         @returns items 1
@@ -52,7 +60,7 @@ class hacker_newsSpider(CommonSpider):
         """
         print("Looking", response.url)
         # Create the loader using the response
-        l = ItemLoader(item=PropertiesItem(), response=response)
+        l = ItemLoader(item=PropertiesItem(), selector=selector)
 
         # Load fields using XPath expressions
         l.add_xpath('title', '//*[@id="area_listing"]/h1/text()',
