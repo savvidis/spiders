@@ -19,7 +19,7 @@ from models import Deals, db_connect, create_auctions_table
 import json
 import codecs
 from collections import OrderedDict
-from geopy.geocoders import Nominatim, GoogleV3
+from geopy.geocoders import Nominatim, GoogleV3, GeoNames
 
 
 class JsonWithEncodingPipeline(object):
@@ -56,7 +56,6 @@ class AuctionsPipeline(object):
 
         """
         session = self.Session()
-        print("itemitemitemitemitemitem")
         print(item)
         deal = Deals(**item)
 
@@ -82,29 +81,35 @@ class LocationPipeline(object):
 
     def process_item(self, item, spider):
         try:
-            #geolocator = Nominatim()
+            # geolocator = Nominatim()
+            # geolocator = GeoNames()
             geolocator = GoogleV3()
             item.setdefault('address', '')
             item.setdefault('neighborhood', '')
             item.setdefault('city', '')
             item.setdefault('region', '')
 
-            locs = [item['address'], item['neighborhood'],
-                    item['city'], item['region']]
+            locs = [item['city'], item['region']]
+            print(locs)
+            location = None
             for loc in locs:
                 if loc:
-                    print(loc)
-                    location = geolocator.geocode(loc, timeout=5)
-                    if location:
-                        break
+                    print("---->", loc)
+                    location = geolocator.geocode(
+                        loc, region="gr", timeout=5)
+
+                if location:
+                    break
+            print("%%%%%%%%%%%% loc %%%%%%%%%%")
+            print(location)
 
             item['latitude'] = location.latitude
             item['longitude'] = location.longitude
             return item
-        except:
+        except Exception as e:
+            print(e)
             print('Location Problem with ', item['url'])
-            raise
-
+            raise e
             # class RedisPipeline(object):
 
             #     def __init__(self):
@@ -124,4 +129,4 @@ class LocationPipeline(object):
             #         self.r.set(item['id'], final_item)
 
             #     def close_spider(self, spider):
-            #         return
+            #         return object

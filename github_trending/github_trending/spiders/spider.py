@@ -30,23 +30,24 @@ class github_trendingSpider(CommonSpider):
         Rule(sle(allow=("/trending$")), callback='parse_1', follow=True),
     ]
 
-    list_css_rules = { 
+    list_css_rules = {
         '.repo-list-item': {
             'repo_name': '.repo-list-name a::attr(href)',
             'repo_meta': '.repo-list-meta::text',
-        }   
-    }   
+        }
+    }
 
-    content_css_rules = { 
+    content_css_rules = {
         'text': '#Cnt-Main-Article-QQ p *::text',
         'images': '#Cnt-Main-Article-QQ img::attr(src)',
         'images-desc': '#Cnt-Main-Article-QQ div p+ p::text',
     }
 
     def parse_1(self, response):
-        info('Parse '+response.url)
+        info('Parse ' + response.url)
         x = self.parse_with_rules(response, self.list_css_rules, dict)
         # x = self.parse_with_rules(response, self.content_css_rules, dict)
         print(json.dumps(x, ensure_ascii=False, indent=2))
         # pp.pprint(x)
-        # return self.parse_with_rules(response, self.css_rules, github_trendingItem)
+        # return self.parse_with_rules(response, self.css_rules,
+        # github_trendingItem)

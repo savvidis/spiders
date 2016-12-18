@@ -9,7 +9,7 @@
     "city": "//*[@id=\"df_field_country_level3\"]/div[2]/text()",
     "neighborhood": "//*[@id=\"df_field_country_level4\"]/div[2]/text()",
     "address": "//*[@id=\"df_field_address\"]/div[2]/text()",
-    "img_url": "//*[@id=\"media\"]/div[1]/img/@src",
+    "img_url": "//*[@id=\"media\"]/div[1]/img/@style",
     "on_site_date": "",
     "views_num": "//*[@id=\"area_listing\"]/section/ul[2]/li/span/text()",
     "construction_year_num": "//*[@id=\"df_field_built_in\"]/div[2]/text()",
@@ -34,7 +34,6 @@
     "contact_website": "//*[@id=\"main_container\"]/div[2]/div/aside/section[1]/div/div/a/img/@style"
   },
   {
-    "url": "http://spitogatos.gr",
     "unique_id": "//*[@id=\"listingDetailsMainContent\"]/div[9]/div[12]/div[2]/text()",
     "title": "//*[@id=\"main\"]/div/section[1]/div/div[1]/h1/text()",
     "price_num": "//*[@id=\"carouselSideDetails\"]/div/div[2]/div[2]/h6/text()",
@@ -65,6 +64,6 @@
     "contact_phone": "//*[@id=\"realtorInfoLinks\"]/div/span[2]/text()",
     "contact_mobile": "//*[@id=\"realtorInfoLinks\"]/div/span[4]/text()",
     "contact_email": "",
-    "contact_website": "//*[@id=\"realtorInfoLinks\"]/span[1]/a/@href"
+    "contact_website": "//*[@id=\"listingDetailsSidebar\"]/div[1]/div[1]/div[1]/div/a/@href"
   }
 ]
