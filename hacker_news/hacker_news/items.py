@@ -19,12 +19,14 @@ class PropertiesItem(Item):
     img_url = Field()
     on_site_date = Field()
     views_num = Field()
-    construction_year_num = Field()
-    category = Field()
+    construction_year = Field()
+    category_major = Field()
+    category_minor = Field()
 
     # Calculated fields
     asset_type = Field()  # real estate or car
     transaction_type = Field()  # commercial or auction
+    price_sm_num = Field()
     updated_date = Field()  # update date as date
     last_update_num = Field()  # update date as duration
     latitude = Field()

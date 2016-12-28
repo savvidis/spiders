@@ -38,7 +38,6 @@ class JsonWithEncodingPipeline(object):
 
 
 class AuctionsPipeline(object):
-    """Livingsocial pipeline for storing scraped items in the database"""
 
     def __init__(self):
         """
@@ -77,6 +76,19 @@ class AuctionsPipeline(object):
         return item
 
 
+class CalcPipeline(object):
+
+    def process_item(self, item, spider):
+        try:
+            item['price_sm_num'] = int(
+                item['price_num']) / int(item['property_area_num'])
+        except Exception as e:
+            print(e)
+            print('Calc Problem with ', item['url'])
+        else:
+            item['price_sm_num'] = 0
+
+
 class LocationPipeline(object):
 
     def process_item(self, item, spider):
@@ -90,7 +102,6 @@ class LocationPipeline(object):
             item.setdefault('region', '')
 
             locs = [item['city'], item['region']]
-            print(locs)
             location = None
             for loc in locs:
                 if loc:
@@ -102,14 +113,17 @@ class LocationPipeline(object):
                     break
             print("%%%%%%%%%%%% loc %%%%%%%%%%")
             print(location)
-
-            item['latitude'] = location.latitude
-            item['longitude'] = location.longitude
+            if location:
+                item['latitude'] = location.latitude
+                item['longitude'] = location.longitude
             return item
         except Exception as e:
             print(e)
             print('Location Problem with ', item['url'])
-            raise e
+        else:
+            item['latitude'] = 0
+            item['longitude'] = 0
+
             # class RedisPipeline(object):
 
             #     def __init__(self):

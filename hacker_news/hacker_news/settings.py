@@ -36,7 +36,7 @@ USER_AGENT = "AdsBot-Google ( http://www.google.com/adsbot.html)",
 
 DOWNLOADER_MIDDLEWARES = {
     'hacker_news.middleware.RotateUserAgentMiddleware': 300,
-    'hacker_news.middleware.ProxyMiddleware': 400,
+    # 'hacker_news.middleware.ProxyMiddleware': 400,
     # 'misc.middleware.CustomUserAgentMiddleware': 401,
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None
 }
@@ -45,7 +45,7 @@ ITEM_PIPELINES = {
     # 'hacker_news.pipelines.JsonWithEncodingPipeline': 300,
     'hacker_news.pipelines.LocationPipeline': 200,
     'hacker_news.pipelines.AuctionsPipeline': 500,
-    #'hacker_news.pipelines.RedisPipeline': 301,
+    # 'hacker_news.pipelines.CalcPipeline': 341,
 }
 EXTENSIONS = {'hacker_news.latencies.Latencies': 520, }
 LATENCIES_INTERVAL = 5
@@ -53,11 +53,11 @@ LATENCIES_INTERVAL = 5
 LOG_LEVEL = 'INFO'
 
 DOWNLOAD_DELAY = 2
-LOG_FILE = "csv.log"
+LOG_FILE = "maincrawler.log"
 # DEPTH_PRIORITY = 1
 # SCHEDULE_DISK_QUEUE = 'scrapy.squeue.PickleFifoDiskQueue'
 # SCHEDULE_MEMORY_QUEUE = 'scrapy.squeue.PickleFifoMemoryQueue'
-# CONCURRENT_REQUESTS = 10
+CONCURRENT_REQUESTS = 10
 CONCURRENT_REQUESTS_PER_DOMAIN = 10
 
 AUTOTHROTTLE_ENABLED = True

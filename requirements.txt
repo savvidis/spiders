@@ -1,0 +1,5 @@
+geopy==1.11.0
+Scrapy==1.2.2
+six==1.10.0
+SQLAlchemy==1.1.4
+stem==1.5.2

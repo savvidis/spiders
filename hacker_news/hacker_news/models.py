@@ -23,7 +23,7 @@ def create_auctions_table(engine):
 
 class Deals(DeclarativeBase):
     """Sqlalchemy deals model"""
-    __tablename__ = "auctions"
+    __tablename__ = "auctionapp_auction"
 
     id = Column(Integer, primary_key=True)
 
@@ -38,14 +38,19 @@ class Deals(DeclarativeBase):
     img_url = Column('img_url', String, nullable=True)
     on_site_date = Column('on_site_date', DateTime, nullable=True)
     views_num = Column('views_num', Integer, nullable=True)
-    construction_year_num = Column(
-        'construction_year_num', Integer, nullable=True)
-    category = Column('category', String, nullable=True)
+    construction_year = Column(
+        'construction_year', String, nullable=True)
+    category_major = Column('category_major', String, nullable=True)
+    category_minor = Column('category_minor', String, nullable=True)
+
     last_update_num = Column('last_update_num', Integer, nullable=True)
     updated_date = Column('updated_date', DateTime, nullable=True)
 
     # Calculated fields
     asset_type = Column('asset_type', String)  # real estate or car
+    # price_sm_num = Column('price_sm_num', Integer,
+    #                       nullable=True)  # real estate
+
     # commercial or auction
     transaction_type = Column('transaction_type', String)
     longitude = Column('longitude', Float)
