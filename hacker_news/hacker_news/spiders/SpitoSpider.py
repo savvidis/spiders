@@ -5,6 +5,7 @@ import urlparse
 import socket
 import socket
 import sys
+import os 
 
 from scrapy.selector import Selector
 
@@ -15,6 +16,7 @@ from scrapy.loader.processors import TakeFirst
 # from torchange import *
 from scrapy.http import Request
 from hacker_news.items import *
+from hacker_news.xpaths import spitogatos
 from scrapy.loader.processors import MapCompose, Join
 # from scrapy.item import Item, Field
 # from sqlalchemy.orm import sessionmaker
@@ -45,9 +47,10 @@ class SpitoSpider(Master):
     def start_requests(self):
         changetor()
         print('Start')
-        with open('xpaths.json') as data_file:
-            dict_source = json.load(data_file)[1]   # First
-            self.source_xpaths = dict_source
+        print(spitogatos)
+	# with open('hacker_news/xpaths.json') as data_file:
+        #    dict_source = json.load(data_file)[1]   # First
+        self.source_xpaths = spitogatos
 
         # ------ Test -----
         # yield Request('file://127.0.0.1/users/sabbidis/Downloads/file.html',
@@ -56,7 +59,7 @@ class SpitoSpider(Master):
 
         for xtype in self.xtypes:
             for tran in self.transactions:
-                for i in range(100, 101):                  # LIMIT CATEGORIES
+                for i in range(100, 110):                  # LIMIT CATEGORIES
                     url = "http://www.homegreekhome.com/en/search/results/" + \
                         xtype + "/" + tran + "/r" + \
                         str(i) + "/m" + str(i) + "m/"
@@ -74,7 +77,7 @@ class SpitoSpider(Master):
         if last_page_number:
             last_page_number = int(last_page_number[0])
             try:
-                offset_pages = min(2, last_page_number /
+                offset_pages = min(10, last_page_number /
                                    10)            # MIN PAGES
             except Exception as e:
                 print(e)

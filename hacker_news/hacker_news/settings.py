@@ -11,7 +11,7 @@ import os
 from os.path import dirname
 path = dirname(dirname(os.path.abspath(os.path.dirname(__file__))))
 sys.path.append(path)
-from misc.log import *
+
 
 BOT_NAME = 'hacker_news'
 
@@ -19,7 +19,7 @@ DATABASE = {
     'drivername': 'postgres',
     'host': 'localhost',
     'port': '5432',
-    'username': 'sabbidis',
+    'username': 'postgres',
     'password': '',
     'database': 'auctions'
 }
@@ -36,8 +36,8 @@ USER_AGENT = "AdsBot-Google ( http://www.google.com/adsbot.html)",
 
 DOWNLOADER_MIDDLEWARES = {
     'hacker_news.middleware.RotateUserAgentMiddleware': 300,
-    # 'hacker_news.middleware.ProxyMiddleware': 400,
-    # 'misc.middleware.CustomUserAgentMiddleware': 401,
+    'hacker_news.middleware.ProxyMiddleware': 400,
+#    'misc.middleware.CustomUserAgentMiddleware': 401,
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None
 }
 
@@ -52,8 +52,8 @@ LATENCIES_INTERVAL = 5
 
 LOG_LEVEL = 'INFO'
 
-DOWNLOAD_DELAY = 2
-LOG_FILE = "maincrawler.log"
+DOWNLOAD_DELAY = 1
+# LOG_FILE = "maincrawler.log"
 # DEPTH_PRIORITY = 1
 # SCHEDULE_DISK_QUEUE = 'scrapy.squeue.PickleFifoDiskQueue'
 # SCHEDULE_MEMORY_QUEUE = 'scrapy.squeue.PickleFifoMemoryQueue'

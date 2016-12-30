@@ -16,41 +16,46 @@ try:
 except:
     from scrapy.spiders import BaseSpider as Spider
 from scrapy.utils.response import get_base_url
+from scrapy.spiders import CrawlSpider, Rule
+from scrapy.linkextractors import LinkExtractor
 from scrapy.loader import ItemLoader
 from scrapy.loader.processors import TakeFirst
 
 # from torchange import *
 from scrapy.http import Request
 from hacker_news.items import *
-
-#from misc.spider import CommonSpider
+from misc.log import *
+from misc.spider import CommonSpider
 from scrapy.loader.processors import MapCompose, Join
-# from scrapy.item import Item, Field
-# from sqlalchemy.orm import sessionmaker
-# from sqlalchemy import exists
+from scrapy.item import Item, Field
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import exists
 from hacker_news.models import db_connect, Deals
-from MasterSpider import *
+from torchange import changetor
 
 from dateutil.parser import parse
 
 
-class CsvSpider(Master):
-    name = "clean"
+class CsvSpider(CommonSpider):
+    name = "json"
     allowed_domains = ["realestate.capital.gr"]
+    # changetor()
+    tor_update_time = datetime.now()
 
-    # My settings
     def start_requests(self):
-        changetor()
         print('Start')
-        with open('hacker_news/xpaths.json') as data_file:
+        changetor()
+        start_urls = []
+        with open('xpaths.json') as data_file:
             dict_source = json.load(data_file)[0]   # First
+            print(dict_source)
             self.source_xpaths = dict_source
-            print(self.source_xpaths)
             yield Request(dict_source.pop('url'))
 
-    # My Starting point
+    # My settings
     def parse(self, response):
         # Find total number of pages
+        self.Session = sessionmaker(bind=db_connect())
         url_first_part = "http://realestate.capital.gr/properties/search-results/"
         last_page_number = response.xpath(
             '//*[@class="transit"]/span[2]/text()').re('[0-9]+')
@@ -58,6 +63,7 @@ class CsvSpider(Master):
         if last_page_number:
             last_page_number = int(last_page_number[0])
         last_page_number = 1
+        print(last_page_number)
         if last_page_number < 1:
             print("last < 1")
             # abort the search if there are no results
@@ -76,7 +82,9 @@ class CsvSpider(Master):
         page_urls = response.xpath('//*[@class="title"]/a/@href')
 
         for url in page_urls.extract():
-            ret = self.entry_exists(Deals, url)
+            ret = self.Session().query(exists().where(Deals.url == url)).scalar()
+            self.Session().close()
+
             if not ret:
                 print("Starting -- > ", url)
                 yield Request(urlparse.urljoin(response.url, url),
@@ -91,12 +99,39 @@ class CsvSpider(Master):
         @scrapes title price description area address
         @scrapes url project spider server date
         """
-        self.check_Tor_time()
+        tdelta = datetime.now() - self.tor_update_time
+        print(tdelta.total_seconds())
+        if (tdelta.total_seconds()) > 30:
+            changetor()
+            self.tor_update_time = datetime.now()
         print("Looking", response.url)
         # Create the loader using the response
         l = ItemLoader(item=PropertiesItem(), response=response)
         l.default_output_processor = TakeFirst()
-        self.fill_from_Json(l)
+        for name, xpath in self.source_xpaths.items():
+            if xpath:
+                if name[-3:] == "num":
+                    l.add_xpath(name, xpath,
+                                MapCompose(
+                                    lambda i: i.replace(',', ''), float),
+                                re='[,.0-9]+')
+                elif name[-4:] == "date":
+                    l.add_xpath(name, xpath,
+                                MapCompose(
+                                    lambda i: parse(i, fuzzy=True), unicode.strip),
+                                )
+                elif xpath[-5:] == "style":
+                    l.add_xpath(name, xpath,
+                                re="background-image.*'(.+)'"
+                                )
+                elif name == "description":
+                    l.add_xpath(name, xpath,
+                                MapCompose(unicode.strip), Join())
+                else:
+                    l.add_xpath(name, xpath,
+                                MapCompose(unicode.strip, unicode.title))
+            else:
+                l.add_value(name, "")
 
         # Housekeeping fields
         l.add_value('url', response.url)

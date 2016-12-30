@@ -18,10 +18,10 @@ from scrapy.loader import ItemLoader
 
 from scrapy.http import Request
 from hacker_news.items import *
-from misc.log import *
-from misc.spider import CommonSpider
+
+#from misc.spider import CommonSpider
 from scrapy.loader.processors import MapCompose, Join
-from torchange import changetor
+from hacker_news.torchange import changetor
 
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import exists
@@ -29,7 +29,7 @@ from hacker_news.models import db_connect, Deals
 from dateutil.parser import parse
 
 
-class Master(CommonSpider):
+class Master(CrawlSpider):
 
     tor_update_time = datetime.now()
 
