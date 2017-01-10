@@ -19,7 +19,6 @@ from scrapy.loader import ItemLoader
 from scrapy.http import Request
 from hacker_news.items import *
 
-#from misc.spider import CommonSpider
 from scrapy.loader.processors import MapCompose, Join
 from hacker_news.torchange import changetor
 

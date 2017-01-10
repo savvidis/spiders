@@ -42,11 +42,8 @@ class CsvSpider(Master):
     def start_requests(self):
         changetor()
         print('Start')
-        with open('hacker_news/xpaths.json') as data_file:
-            dict_source = json.load(data_file)[0]   # First
-            self.source_xpaths = dict_source
-            print(self.source_xpaths)
-            yield Request(dict_source.pop('url'))
+        self.source_xpaths = capital
+        self.tor_update_time = datetime.now()
 
     # My Starting point
     def parse(self, response):

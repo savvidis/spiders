@@ -37,7 +37,7 @@ USER_AGENT = "AdsBot-Google ( http://www.google.com/adsbot.html)",
 DOWNLOADER_MIDDLEWARES = {
     'hacker_news.middleware.RotateUserAgentMiddleware': 300,
     'hacker_news.middleware.ProxyMiddleware': 400,
-#    'misc.middleware.CustomUserAgentMiddleware': 401,
+    #    'misc.middleware.CustomUserAgentMiddleware': 401,
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None
 }
 

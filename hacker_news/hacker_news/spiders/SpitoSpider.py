@@ -5,7 +5,7 @@ import urlparse
 import socket
 import socket
 import sys
-import os 
+import os
 
 from scrapy.selector import Selector
 
@@ -13,14 +13,11 @@ from scrapy.utils.response import get_base_url
 from scrapy.loader import ItemLoader
 from scrapy.loader.processors import TakeFirst
 
-# from torchange import *
 from scrapy.http import Request
 from hacker_news.items import *
 from hacker_news.xpaths import spitogatos
 from scrapy.loader.processors import MapCompose, Join
-# from scrapy.item import Item, Field
-# from sqlalchemy.orm import sessionmaker
-# from sqlalchemy import exists
+
 from hacker_news.models import db_connect, Deals
 from MasterSpider import *
 
@@ -42,14 +39,12 @@ class SpitoSpider(Master):
         "sale",
         # "rent"
     ]
-    # My settings
 
+    # My settings
     def start_requests(self):
         changetor()
         print('Start')
         print(spitogatos)
-	# with open('hacker_news/xpaths.json') as data_file:
-        #    dict_source = json.load(data_file)[1]   # First
         self.source_xpaths = spitogatos
 
         # ------ Test -----

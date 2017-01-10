@@ -3,7 +3,7 @@
 import random
 
 from scrapy import log
-from scrapy.contrib.downloadermiddleware.useragent import UserAgentMiddleware
+from scrapy.downloadermiddlewares.useragent import UserAgentMiddleware
 from settings import *
 
 
