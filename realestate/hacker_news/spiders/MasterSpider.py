@@ -44,6 +44,9 @@ class Master(CrawlSpider):
         for name, xpath in self.source_xpaths.items():
             print(name, xpath)
             if xpath:
+                if name[-4] == "html":
+                    l.add_xpath(name, xpath)
+                    print("eimai edo")
                 if name[-3:] == "num":
                     l.add_xpath(name, xpath,
                                 MapCompose(
