@@ -33,9 +33,9 @@ class SpitoSpider(Master):
 
     xtypes = [
         "residential",
-        "land",
-        "new-residential",
-        "commercial"
+        # "land",
+        # "new-residential",
+        # "commercial"
     ]
 
     transactions = [
