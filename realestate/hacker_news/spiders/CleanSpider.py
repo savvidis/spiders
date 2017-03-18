@@ -89,24 +89,19 @@ class CsvSpider(Master):
         for cat_major in self.cat_major_list:
             if cat_major == "homes":
                 for cat_minor in self.minor_homes:
-                    self.xcategories = (cat_major, cat_minor)
-                    print(self.xcategories)
                     url = "http://realestate.capital.gr/properties/" + cat_major + "/" + cat_minor
-                    yield Request(url, callback=self.parse)
+                    yield Request(url, callback=self.get_pages)
             elif cat_major == "land":
                 for cat_minor in self.minor_land:
-                    self.xcategories = (cat_major, cat_minor)
-                    print(self.xcategories)
                     url = "http://realestate.capital.gr/properties/" + cat_major + "/" + cat_minor
-                    yield Request(url, callback=self.parse)
+                    yield Request(url, callback=self.get_pages)
             else:
                 for cat_minor in self.minor_commercial:
-                    self.xcategories = (cat_major, cat_minor)
                     url = "http://realestate.capital.gr/properties/" + cat_major + "/" + cat_minor
-                    yield Request(url, callback=self.parse)
+                    yield Request(url, callback=self.get_pages)
 
     # My Starting point
-    def parse(self, response):
+    def get_pages(self, response):
         # Find total number of pages
         url_first_part = response.url
         print(response.url)
@@ -118,7 +113,6 @@ class CsvSpider(Master):
 
         if last_page_number:
             last_page_number = int(last_page_number[0])
-        last_page_number = 1
         if last_page_number < 1:
             print("last < 1")
             # abort the search if there are no results
@@ -170,9 +164,11 @@ class CsvSpider(Master):
             l.add_value('on_site_date', ddate)
         except Exception as e:
             print(e)
+        url_categories = re.search(r('ties/(.+)/(.+)/'), response.url)
+        xcategories = (url_categories.group(1), url_categories.group(2))
 
-        l.replace_value('category_major', self.xcategories[0])
-        l.replace_value('category_minor', self.xcategories[1])
+        l.replace_value('category_major', xcategories[0])
+        l.replace_value('category_minor', xcategories[1])
 
         # Housekeeping fields
         l.add_value('url', response.url)
