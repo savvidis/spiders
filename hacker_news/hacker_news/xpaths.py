@@ -37,6 +37,7 @@ capital["contact_website"]= "//*[@id=\"main_container\"]/div[2]/div/aside/sectio
 
 
 spitogatos["unique_id"]= ""
+spitogatos["fulltext"] = "//*[@id=\"listingDetailsMainContent\"]/text()"
 spitogatos["title"]= "//*[@id=\"main\"]/div/section[1]/div/div[1]/h1/text()"
 spitogatos["price_num"]= "//*[@id=\"carouselSideDetails\"]/div/div[2]/div[2]/h6/text()"
 spitogatos["description"]= "//*[@id=\"listingDetailsMainContent\"]/div[10]/div/text()"

@@ -43,7 +43,7 @@ DOWNLOADER_MIDDLEWARES = {
 
 ITEM_PIPELINES = {
     # 'hacker_news.pipelines.JsonWithEncodingPipeline': 300,
-    'hacker_news.pipelines.LocationPipeline': 200,
+#     'hacker_news.pipelines.LocationPipeline': 200,
     'hacker_news.pipelines.AuctionsPipeline': 500,
     # 'hacker_news.pipelines.CalcPipeline': 341,
 }

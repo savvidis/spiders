@@ -22,7 +22,7 @@ class PropertiesItem(Item):
     construction_year = Field()
     category_major = Field()
     category_minor = Field()
-
+    fulltext = Field()
     # Calculated fields
     asset_type = Field()  # real estate or car
     transaction_type = Field()  # commercial or auction

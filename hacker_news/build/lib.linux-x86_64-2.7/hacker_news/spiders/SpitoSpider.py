@@ -29,18 +29,18 @@ from dateutil.parser import parse
 
 class SpitoSpider(Master):
     name = "spito"
-    allowed_domains = ["homegreekhome.com"]
+    allowed_domains = ["homegreekhome.com","spitogatos.gr"]
 
     xtypes = [
         "residential",
-        # "land",
-        # "new-residential",
-        # "commercial"
+        "land",
+        "new-residential",
+        "commercial"
     ]
 
     transactions = [
         "sale",
-        # "rent"
+        "rent"
     ]
     # My settings
 
@@ -77,8 +77,8 @@ class SpitoSpider(Master):
         if last_page_number:
             last_page_number = int(last_page_number[0])
             try:
-                offset_pages = min(10, last_page_number /
-                                   10)            # MIN PAGES
+                offset_pages = min(1000, last_page_number /
+                                   1000)            # MIN PAGES
             except Exception as e:
                 print(e)
 
@@ -97,10 +97,10 @@ class SpitoSpider(Master):
         page_urls = response.xpath(
             '//*[@id="searchDetailsListings"]/div/div/a/@href').extract()
         for url in page_urls:
-            if re.search('(.+)\?', url):
-                nurl = re.search('(.+)\?', url).group(1)
+            if re.search('(.+)?', url):
+                nurl = re.search('(.+)?', url).group(1)
             else:
-                nurl = ""
+                nurl = url
             ret = self.entry_exists(Deals, nurl)
             if not ret:
                 print("Starting -- > ", nurl)
