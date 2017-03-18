@@ -43,10 +43,9 @@ class Master(CrawlSpider):
     def fill_from_Json(self, l):
         xdic = self.source_xpaths
         for name in xdic.keys():
-            print name
+            # print name
             if xdic[name] != '':
-                print name
-
+                # print name
                 if name[-4:] and name[-4:] == "html":
                     print("eimai edo0")
                     try:

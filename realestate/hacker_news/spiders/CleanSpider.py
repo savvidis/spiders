@@ -113,6 +113,7 @@ class CsvSpider(Master):
         print('2.5')
         last_page_number = response.xpath(
             '//*[@class="transit"]/span[2]/text()').re('[0-9]+')
+        print('last_page_number', last_page_number)
         print('2')
 
         if last_page_number:
