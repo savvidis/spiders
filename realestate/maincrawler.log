@@ -13051,3 +13051,101 @@ TypeError: can only concatenate list (not "int") to list
 2017-03-18 23:20:49 [scrapy] INFO: Received SIGINT, shutting down gracefully. Send again to force 
 2017-03-18 23:20:49 [scrapy] INFO: Closing spider (shutdown)
 2017-03-18 23:20:49 [scrapy] INFO: Received SIGINT twice, forcing unclean shutdown
+2017-03-18 23:41:26 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 23:41:26 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 23:41:26 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 23:41:26 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 23:41:26 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 23:41:26 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 23:41:26 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 23:41:26 [scrapy] INFO: Spider opened
+2017-03-18 23:41:26 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 23:41:26 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:41:27 [scrapy] INFO: slot: realestate.capital.gr | conc: 1 | delay: 5000 ms (+0) | latency: 1222 ms | size:   265 bytes
+2017-03-18 23:41:31 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:41:34 [scrapy] INFO: slot: realestate.capital.gr | conc: 1 | delay: 5000 ms (+0) | latency:  599 ms | size:   261 bytes
+2017-03-18 23:41:36 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:41:38 [scrapy] INFO: slot: realestate.capital.gr | conc: 1 | delay: 5000 ms (+0) | latency:  583 ms | size:   266 bytes
+2017-03-18 23:41:41 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:41:44 [scrapy] INFO: slot: realestate.capital.gr | conc: 1 | delay: 5000 ms (+0) | latency:  670 ms | size:   261 bytes
+2017-03-18 23:41:46 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:41:51 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:41:56 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:42:01 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:42:05 [scrapy] INFO: slot: realestate.capital.gr | conc: 3 | delay:15757 ms (+10757) | latency:15757 ms | size: 15405 bytes
+2017-03-18 23:42:06 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:42:08 [scrapy] INFO: slot: realestate.capital.gr | conc: 2 | delay:14336 ms (-1420) | latency:12916 ms | size: 16338 bytes
+2017-03-18 23:42:11 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:42:16 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:42:21 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:42:21 [scrapy] INFO: slot: realestate.capital.gr | conc: 2 | delay:20047 ms (+5710) | latency:20047 ms | size: 16531 bytes
+2017-03-18 23:42:26 [scrapy] INFO: Crawled 3 pages (at 3 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 23:42:26 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:42:31 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:42:35 [scrapy] INFO: slot: realestate.capital.gr | conc: 2 | delay:18187 ms (-1859) | latency:16328 ms | size: 17028 bytes
+2017-03-18 23:42:36 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:42:41 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:42:46 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:42:50 [scrapy] INFO: slot: realestate.capital.gr | conc: 1 | delay:16813 ms (-1373) | latency:15440 ms | size: 15409 bytes
+2017-03-18 23:42:51 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:42:56 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:43:01 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:43:06 [scrapy] INFO: slot: realestate.capital.gr | conc: 2 | delay:14217 ms (-2596) | latency:11621 ms | size: 16204 bytes
+2017-03-18 23:43:06 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:43:11 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:43:16 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:43:18 [scrapy] INFO: slot: realestate.capital.gr | conc: 1 | delay:13720 ms (-497) | latency:13222 ms | size: 16536 bytes
+2017-03-18 23:43:21 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:43:26 [scrapy] INFO: Crawled 7 pages (at 4 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 23:43:26 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:43:31 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:43:36 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:43:40 [scrapy] INFO: slot: realestate.capital.gr | conc: 1 | delay:12938 ms (-782) | latency:12155 ms | size: 16889 bytes
+2017-03-18 23:43:41 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:43:46 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:43:51 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:43:54 [scrapy] INFO: slot: realestate.capital.gr | conc: 1 | delay:11504 ms (-1433) | latency:10070 ms | size: 15754 bytes
+2017-03-18 23:43:55 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 23:43:56 [clean] INFO: Scraped 1 items at 0.2 items/s, avg latency: 64.45 s and avg time in pipelines: 0.31 s
+2017-03-18 23:44:01 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:44:06 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:44:11 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:44:15 [scrapy] INFO: slot: realestate.capital.gr | conc: 1 | delay:14300 ms (+2796) | latency:14300 ms | size: 16234 bytes
+2017-03-18 23:44:16 [clean] INFO: Scraped 1 items at 0.2 items/s, avg latency: 85.16 s and avg time in pipelines: 0.27 s
+2017-03-18 23:44:21 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:44:25 [scrapy] INFO: slot: realestate.capital.gr | conc: 1 | delay:11306 ms (-2993) | latency: 8312 ms | size: 15949 bytes
+2017-03-18 23:44:25 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 23:44:26 [scrapy] INFO: Crawled 11 pages (at 4 pages/min), scraped 3 items (at 3 items/min)
+2017-03-18 23:44:26 [clean] INFO: Scraped 1 items at 0.2 items/s, avg latency: 94.75 s and avg time in pipelines: 0.20 s
+2017-03-18 23:44:31 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:44:36 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:44:41 [scrapy] INFO: slot: realestate.capital.gr | conc: 1 | delay:14277 ms (+2971) | latency:14277 ms | size: 16511 bytes
+2017-03-18 23:44:41 [clean] INFO: Scraped 1 items at 0.2 items/s, avg latency: 110.55 s and avg time in pipelines: 0.26 s
+2017-03-18 23:44:46 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 23:44:49 [scrapy] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2017-03-18 23:44:49 [scrapy] INFO: Closing spider (shutdown)
+2017-03-18 23:44:49 [scrapy] INFO: Received SIGINT twice, forcing unclean shutdown
