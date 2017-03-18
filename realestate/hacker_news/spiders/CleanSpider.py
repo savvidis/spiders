@@ -78,32 +78,32 @@ class CsvSpider(Master):
         self.source_xpaths = capital
 
      # ------ Test -----
-    def start_requests(self):
-        changetor()
-        print('Start')
-        yield Request('file://127.0.0.1/users/sabbidis/Downloads/capital_demo.html',
-                      callback=self.parse_item)
+    # def start_requests(self):
+    #     changetor()
+    #     print('Start')
+    #     yield Request('file://127.0.0.1/users/sabbidis/Downloads/capital_demo2.html',
+    #                   callback=self.parse_item)
      # ----- End ------
 
-    # def start_requests(self):
-    #     for cat_major in self.cat_major_list:
-    #         if cat_major == "homes":
-    #             for cat_minor in self.minor_homes:
-    #                 self.xcategories = (cat_major, cat_minor)
-    #                 print(self.xcategories)
-    #                 url = "http://realestate.capital.gr/properties/" + cat_major + "/" + cat_minor
-    #                 yield Request(url, callback=self.parse)
-    #         elif cat_major == "land":
-    #             for cat_minor in self.minor_land:
-    #                 self.xcategories = (cat_major, cat_minor)
-    #                 print(self.xcategories)
-    #                 url = "http://realestate.capital.gr/properties/" + cat_major + "/" + cat_minor
-    #                 yield Request(url, callback=self.parse)
-    #         else:
-    #             for cat_minor in self.minor_commercial:
-    #                 self.xcategories = (cat_major, cat_minor)
-    #                 url = "http://realestate.capital.gr/properties/" + cat_major + "/" + cat_minor
-    #                 yield Request(url, callback=self.parse)
+    def start_requests(self):
+        for cat_major in self.cat_major_list:
+            if cat_major == "homes":
+                for cat_minor in self.minor_homes:
+                    self.xcategories = (cat_major, cat_minor)
+                    print(self.xcategories)
+                    url = "http://realestate.capital.gr/properties/" + cat_major + "/" + cat_minor
+                    yield Request(url, callback=self.parse)
+            elif cat_major == "land":
+                for cat_minor in self.minor_land:
+                    self.xcategories = (cat_major, cat_minor)
+                    print(self.xcategories)
+                    url = "http://realestate.capital.gr/properties/" + cat_major + "/" + cat_minor
+                    yield Request(url, callback=self.parse)
+            else:
+                for cat_minor in self.minor_commercial:
+                    self.xcategories = (cat_major, cat_minor)
+                    url = "http://realestate.capital.gr/properties/" + cat_major + "/" + cat_minor
+                    yield Request(url, callback=self.parse)
 
     # My Starting point
     def parse(self, response):
@@ -170,8 +170,8 @@ class CsvSpider(Master):
         except Exception as e:
             print(e)
 
-        # l.replace_value('category_major', self.xcategories[0])
-        # l.replace_value('category_minor', self.xcategories[1])
+        l.replace_value('category_major', self.xcategories[0])
+        l.replace_value('category_minor', self.xcategories[1])
 
         # Housekeeping fields
         l.add_value('url', response.url)

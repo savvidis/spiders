@@ -19,7 +19,7 @@ class PropertiesItem(Item):
     img_url = Field()
     on_site_date = Field()
     views_num = Field()
-    construction_year = Field()
+    construction_num = Field()
     category_major = Field()
     category_minor = Field()
     fulltext = Field()

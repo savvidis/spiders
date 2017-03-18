@@ -38,8 +38,8 @@ class Deals(DeclarativeBase):
     img_url = Column('img_url', String, nullable=True)
     on_site_date = Column('on_site_date', DateTime, nullable=True)
     views_num = Column('views_num', Integer, nullable=True)
-    construction_year = Column(
-        'construction_year', String, nullable=True)
+    construction_num = Column(
+        'construction_year', Integer, nullable=True)
     category_major = Column('category_major', String, nullable=True)
     category_minor = Column('category_minor', String, nullable=True)
     fulltext = Column('fulltext', String)

@@ -10541,3 +10541,2393 @@ AttributeError: 'CsvSpider' object has no attribute 'xcategories'
  'scheduler/enqueued/memory': 1,
  'start_time': datetime.datetime(2017, 3, 18, 17, 11, 18, 138595)}
 2017-03-18 18:11:18 [scrapy] INFO: Spider closed (finished)
+2017-03-18 19:55:25 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 19:55:25 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 19:55:25 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 19:55:26 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 19:55:26 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 19:55:26 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 19:55:27 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 19:55:27 [scrapy] INFO: Spider opened
+2017-03-18 19:55:27 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 19:55:27 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 19:55:27 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 19:55:27 [scrapy] INFO: Closing spider (finished)
+2017-03-18 19:55:27 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 306,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 18, 55, 27, 679061),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 18, 55, 27, 316486)}
+2017-03-18 19:55:27 [scrapy] INFO: Spider closed (finished)
+2017-03-18 19:57:28 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 19:57:28 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 19:57:28 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 19:57:28 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 19:57:29 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 19:57:29 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 19:57:30 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 19:57:30 [scrapy] INFO: Spider opened
+2017-03-18 19:57:30 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 19:57:30 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 19:57:30 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 19:57:30 [scrapy] INFO: Closing spider (finished)
+2017-03-18 19:57:30 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 286,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 18, 57, 30, 704310),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 18, 57, 30, 329321)}
+2017-03-18 19:57:30 [scrapy] INFO: Spider closed (finished)
+2017-03-18 19:57:40 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 19:57:40 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 19:57:41 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 19:57:41 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 19:57:41 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 19:57:41 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 19:57:41 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 19:57:41 [scrapy] INFO: Spider opened
+2017-03-18 19:57:41 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 19:57:41 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 19:57:41 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 19:57:41 [scrapy] INFO: Closing spider (finished)
+2017-03-18 19:57:41 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 269,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 18, 57, 41, 783488),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 18, 57, 41, 507470)}
+2017-03-18 19:57:41 [scrapy] INFO: Spider closed (finished)
+2017-03-18 19:57:56 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 19:57:56 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 19:57:56 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 19:57:56 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 19:57:57 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 19:57:57 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 19:57:57 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 19:57:57 [scrapy] INFO: Spider opened
+2017-03-18 19:57:57 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 19:57:57 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 19:57:57 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 19:57:57 [scrapy] INFO: Closing spider (finished)
+2017-03-18 19:57:57 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 322,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 18, 57, 57, 371335),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 18, 57, 57, 152201)}
+2017-03-18 19:57:57 [scrapy] INFO: Spider closed (finished)
+2017-03-18 19:58:44 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 19:58:44 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 19:58:44 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 19:58:44 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 19:58:44 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 19:58:44 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 19:58:44 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 19:58:44 [scrapy] INFO: Spider opened
+2017-03-18 19:58:44 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 19:58:44 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 19:58:44 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 19:58:45 [scrapy] INFO: Closing spider (finished)
+2017-03-18 19:58:45 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 321,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 18, 58, 45, 155920),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 18, 58, 44, 949053)}
+2017-03-18 19:58:45 [scrapy] INFO: Spider closed (finished)
+2017-03-18 19:59:33 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 19:59:33 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 19:59:34 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 19:59:34 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 19:59:34 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 19:59:34 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 19:59:34 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 19:59:34 [scrapy] INFO: Spider opened
+2017-03-18 19:59:34 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 19:59:34 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 19:59:35 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 19:59:35 [scrapy] INFO: Closing spider (finished)
+2017-03-18 19:59:35 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 286,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 18, 59, 35, 196809),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 18, 59, 34, 976139)}
+2017-03-18 19:59:35 [scrapy] INFO: Spider closed (finished)
+2017-03-18 19:59:49 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 19:59:49 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 19:59:49 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 19:59:50 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 19:59:50 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 19:59:50 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 19:59:50 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 19:59:50 [scrapy] INFO: Spider opened
+2017-03-18 19:59:50 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 19:59:50 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 19:59:50 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 19:59:50 [scrapy] INFO: Closing spider (finished)
+2017-03-18 19:59:50 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 269,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 18, 59, 50, 435648),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 18, 59, 50, 212437)}
+2017-03-18 19:59:50 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:06:51 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:06:51 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:06:52 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:06:52 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:06:52 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:06:52 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:06:53 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:06:53 [scrapy] INFO: Spider opened
+2017-03-18 20:06:53 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:06:53 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:06:53 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:06:53 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 286,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 6, 53, 997749),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 36,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 6, 53, 679414)}
+2017-03-18 20:06:53 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:07:37 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:07:37 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:07:38 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:07:38 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:07:38 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:07:38 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:07:38 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:07:38 [scrapy] INFO: Spider opened
+2017-03-18 20:07:39 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:07:39 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:07:39 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:07:39 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 275,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 7, 39, 378717),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 38,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 7, 39, 69725)}
+2017-03-18 20:07:39 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:11:13 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:11:13 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:11:13 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:11:13 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:11:13 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:11:13 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:11:14 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:11:14 [scrapy] INFO: Spider opened
+2017-03-18 20:11:14 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:11:14 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:11:14 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:11:14 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:11:14 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 306,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 11, 14, 708216),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 11, 14, 412851)}
+2017-03-18 20:11:14 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:12:14 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:12:14 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:12:14 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:12:14 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:12:14 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:12:14 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:12:14 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:12:14 [scrapy] INFO: Spider opened
+2017-03-18 20:12:14 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:12:14 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:12:14 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:12:14 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:12:14 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:12:14 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 335,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 12, 14, 850538),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 12, 14, 634786)}
+2017-03-18 20:12:14 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:13:18 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:13:18 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:13:19 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:13:19 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:13:19 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:13:19 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:13:19 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:13:19 [scrapy] INFO: Spider opened
+2017-03-18 20:13:20 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:13:20 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:13:20 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:13:20 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:13:20 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 266,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 13, 20, 377327),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 13, 20, 59527)}
+2017-03-18 20:13:20 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:14:22 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:14:22 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:14:22 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:14:22 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:14:22 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:14:22 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:14:22 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:14:22 [scrapy] INFO: Spider opened
+2017-03-18 20:14:22 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:14:22 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:14:22 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:14:22 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:14:22 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:14:22 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 286,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 14, 22, 667941),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 10,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 14, 22, 448895)}
+2017-03-18 20:14:22 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:16:10 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:16:10 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:16:10 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:16:10 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:16:11 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:16:11 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:16:11 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:16:11 [scrapy] INFO: Spider opened
+2017-03-18 20:16:11 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:16:11 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:16:12 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:16:12 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:16:12 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 269,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 16, 12, 256528),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 16, 11, 903999)}
+2017-03-18 20:16:12 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:16:45 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:16:45 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:16:45 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:16:45 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:16:45 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:16:45 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:16:45 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:16:45 [scrapy] INFO: Spider opened
+2017-03-18 20:16:45 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:16:45 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:16:45 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:16:46 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:16:46 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 269,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 16, 46, 88091),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 16, 45, 872167)}
+2017-03-18 20:16:46 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:19:00 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:19:00 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:19:00 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:19:00 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:19:00 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:19:00 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:19:01 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:19:01 [scrapy] INFO: Spider opened
+2017-03-18 20:19:01 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:19:01 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:19:01 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:19:01 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:19:01 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 286,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 19, 1, 346168),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 19, 1, 115760)}
+2017-03-18 20:19:01 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:19:36 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:19:36 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:19:37 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:19:37 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:19:37 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:19:37 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:19:37 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:19:37 [scrapy] INFO: Spider opened
+2017-03-18 20:19:37 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:19:37 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:19:37 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:19:37 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:19:37 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 288,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 19, 37, 435546),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 19, 37, 223508)}
+2017-03-18 20:19:37 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:20:06 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:20:06 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:20:06 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:20:06 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:20:06 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:20:06 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:20:06 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:20:06 [scrapy] INFO: Spider opened
+2017-03-18 20:20:06 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:20:06 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:06 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:20:07 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:20:07 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 328,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 20, 7, 74291),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 94,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 20, 6, 842856)}
+2017-03-18 20:20:07 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:21:13 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:21:13 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:21:13 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:21:13 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:21:13 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:21:13 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:21:13 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:21:13 [scrapy] INFO: Spider opened
+2017-03-18 20:21:13 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:21:13 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:21:13 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:21:13 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:21:13 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 286,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 21, 13, 661920),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 21, 13, 427454)}
+2017-03-18 20:21:13 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:21:53 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:21:53 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:21:53 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:21:53 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:21:53 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:21:53 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:21:53 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:21:53 [scrapy] INFO: Spider opened
+2017-03-18 20:21:53 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:21:53 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:21:53 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:21:54 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:21:54 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 321,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 21, 54, 175647),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 21, 53, 956292)}
+2017-03-18 20:21:54 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:22:41 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:22:41 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:22:41 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:22:41 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:22:41 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:22:41 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:22:42 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:22:42 [scrapy] INFO: Spider opened
+2017-03-18 20:22:42 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:22:42 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:22:42 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:22:42 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:22:42 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 277,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 22, 42, 322002),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 22, 42, 93809)}
+2017-03-18 20:22:42 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:23:28 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:23:28 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:23:28 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:23:28 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:23:28 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:23:28 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:23:28 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:23:28 [scrapy] INFO: Spider opened
+2017-03-18 20:23:28 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:23:28 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:28 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:29 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:23:29 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:23:29 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 258,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 23, 29, 333788),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 326,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 23, 28, 892660)}
+2017-03-18 20:23:29 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:24:10 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:24:10 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:24:10 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:24:10 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:24:10 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:24:10 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:24:10 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:24:10 [scrapy] INFO: Spider opened
+2017-03-18 20:24:10 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:24:10 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:24:10 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:24:10 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:24:10 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 266,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 24, 10, 702208),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 24, 10, 517906)}
+2017-03-18 20:24:10 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:27:37 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:27:37 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:27:37 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:27:37 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:27:37 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:27:37 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:27:37 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:27:37 [scrapy] INFO: Spider opened
+2017-03-18 20:27:37 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:27:37 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:27:37 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:27:37 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:27:37 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 286,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 27, 37, 989813),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 27, 37, 771041)}
+2017-03-18 20:27:37 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:28:54 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:28:54 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:28:54 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:28:54 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:28:54 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:28:54 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:28:55 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:28:55 [scrapy] INFO: Spider opened
+2017-03-18 20:28:55 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:28:55 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:28:55 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:28:55 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:28:55 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 322,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 28, 55, 754802),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 28, 55, 264774)}
+2017-03-18 20:28:55 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:31:13 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:31:13 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:31:13 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:31:13 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:31:13 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:31:13 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:31:13 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:31:13 [scrapy] INFO: Spider opened
+2017-03-18 20:31:13 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:31:13 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:31:13 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:31:13 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:31:13 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:31:13 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:31:13 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:31:13 [stem] INFO: Error while receiving a control message (SocketClosed): socket file has been closed
+2017-03-18 20:31:14 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:31:14 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 286,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 31, 14, 69508),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 14,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 31, 13, 850572)}
+2017-03-18 20:31:14 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:32:58 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:32:58 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:32:58 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:32:58 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:32:58 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:32:58 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:32:58 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:32:58 [scrapy] INFO: Spider opened
+2017-03-18 20:32:59 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:32:59 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:32:59 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:32:59 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:32:59 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 321,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 32, 59, 303650),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 32, 59, 74071)}
+2017-03-18 20:32:59 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:37:30 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:37:30 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:37:30 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:37:30 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:37:31 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:37:31 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:37:32 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:37:32 [scrapy] INFO: Spider opened
+2017-03-18 20:37:32 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:37:32 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:37:32 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:37:32 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:37:32 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 266,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 37, 32, 796253),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 37, 32, 432170)}
+2017-03-18 20:37:32 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:38:49 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:38:49 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:38:49 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:38:49 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:38:49 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:38:49 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:38:49 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:38:49 [scrapy] INFO: Spider opened
+2017-03-18 20:38:49 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:38:49 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:38:49 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:38:50 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:38:50 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 335,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 38, 50, 172282),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 38, 49, 920161)}
+2017-03-18 20:38:50 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:39:09 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:39:09 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:39:09 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:39:09 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:39:09 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:39:09 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:39:09 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:39:09 [scrapy] INFO: Spider opened
+2017-03-18 20:39:09 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:39:09 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:39:09 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:39:09 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:39:09 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 321,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 39, 9, 506928),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 39, 9, 273617)}
+2017-03-18 20:39:09 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:40:26 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:40:26 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:40:26 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:40:26 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:40:26 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:40:26 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:40:27 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:40:27 [scrapy] INFO: Spider opened
+2017-03-18 20:40:27 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:40:27 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:40:27 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:40:27 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:40:27 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 321,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 75955,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 40, 27, 477257),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 40, 27, 151930)}
+2017-03-18 20:40:27 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:41:13 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:41:13 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:41:13 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:41:13 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:41:14 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:41:14 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:41:14 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:41:14 [scrapy] INFO: Spider opened
+2017-03-18 20:41:15 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:41:15 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:41:15 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:41:15 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:41:15 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 269,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 93472,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 41, 15, 415563),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 41, 15, 756)}
+2017-03-18 20:41:15 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:44:20 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:44:20 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:44:20 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:44:20 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:44:21 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:44:21 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:44:21 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:44:21 [scrapy] INFO: Spider opened
+2017-03-18 20:44:21 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:44:21 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:44:22 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:44:22 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:44:22 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 288,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 93472,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 44, 22, 333179),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 44, 21, 945056)}
+2017-03-18 20:44:22 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:45:45 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:45:45 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:45:45 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:45:45 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:45:45 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:45:45 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:45:46 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:45:46 [scrapy] INFO: Spider opened
+2017-03-18 20:45:46 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:45:46 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:45:46 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:45:47 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:45:47 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 266,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 93472,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 45, 47, 93071),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 45, 46, 575990)}
+2017-03-18 20:45:47 [scrapy] INFO: Spider closed (finished)
+2017-03-18 20:48:04 [scrapy] INFO: Scrapy 1.2.2 started (bot: hacker_news)
+2017-03-18 20:48:04 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'hacker_news.spiders', 'LOG_FILE': 'maincrawler.log', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'CONCURRENT_REQUESTS': 10, 'SPIDER_MODULES': ['hacker_news.spiders'], 'BOT_NAME': 'hacker_news', 'COOKIES_ENABLED': False, 'USER_AGENT': ('AdsBot-Google ( http://www.google.com/adsbot.html)',), 'AUTOTHROTTLE_ENABLED': True, 'DOWNLOAD_DELAY': 1, 'AUTOTHROTTLE_DEBUG': True}
+2017-03-18 20:48:04 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.throttle.AutoThrottle',
+ 'hacker_news.latencies.Latencies']
+2017-03-18 20:48:04 [py.warnings] WARNING: /Users/sabbidis/projects/spiders/realestate/hacker_news/middleware.py:5: ScrapyDeprecationWarning: Module `scrapy.log` has been deprecated, Scrapy now relies on the builtin Python library for logging. Read the updated logging entry in the documentation to learn more.
+  from scrapy import log
+
+2017-03-18 20:48:04 [scrapy] INFO: Enabled downloader middlewares:
+['hacker_news.middleware.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'hacker_news.middleware.ProxyMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-18 20:48:04 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-18 20:48:04 [scrapy] INFO: Enabled item pipelines:
+['hacker_news.pipelines.AuctionsPipeline']
+2017-03-18 20:48:04 [scrapy] INFO: Spider opened
+2017-03-18 20:48:04 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-18 20:48:04 [clean] INFO: Scraped 0 items at 0.0 items/s, avg latency: 0.00 s and avg time in pipelines: 0.00 s
+2017-03-18 20:48:04 [stem] INFO: Error while receiving a control message (SocketClosed): empty socket content
+2017-03-18 20:48:05 [scrapy] INFO: Closing spider (finished)
+2017-03-18 20:48:05 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 336,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 93472,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 18, 19, 48, 5, 263136),
+ 'item_scraped_count': 1,
+ 'log_count/INFO': 9,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 3, 18, 19, 48, 4, 586428)}
+2017-03-18 20:48:05 [scrapy] INFO: Spider closed (finished)
