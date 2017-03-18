@@ -73,7 +73,7 @@ class CsvSpider(Master):
     # My settings
 
     def __init__(self):
-        # changetor()
+        changetor()
         print('Start')
         self.source_xpaths = capital
 
@@ -91,15 +91,15 @@ class CsvSpider(Master):
                 for cat_minor in self.minor_homes:
                     url = "http://realestate.capital.gr/properties/" + cat_major + "/" + cat_minor
                     yield Request(url, callback=self.get_pages, meta={'xcategories': (cat_major, cat_minor)})
-            # elif cat_major == "land":
-            #     for cat_minor in self.minor_land:
-            #         url = "http://realestate.capital.gr/properties/" + cat_major + "/" + cat_minor
-            #         yield Request(url, callback=self.get_pages, meta={'xcategories': (cat_major, cat_minor)})
-            # else:
-            #     for cat_minor in self.minor_commercial:
-            #         url = "http://realestate.capital.gr/properties/" + cat_major + "/" + cat_minor
-            # yield Request(url, callback=self.get_pages, meta={'xcategories':
-            # (cat_major, cat_minor)})
+            elif cat_major == "land":
+                for cat_minor in self.minor_land:
+                    url = "http://realestate.capital.gr/properties/" + cat_major + "/" + cat_minor
+                    yield Request(url, callback=self.get_pages, meta={'xcategories': (cat_major, cat_minor)})
+            else:
+                for cat_minor in self.minor_commercial:
+                    url = "http://realestate.capital.gr/properties/" + cat_major + "/" + cat_minor
+            yield Request(url, callback=self.get_pages, meta={'xcategories':
+                                                              (cat_major, cat_minor)})
 
     # My Starting point
     def get_pages(self, response):
@@ -114,7 +114,7 @@ class CsvSpider(Master):
 
         if last_page_number:
             last_page_number = int(last_page_number[0])
-        last_page_number = 1
+        # last_page_number = 1
         if last_page_number < 1:
             print("last < 1")
             # abort the search if there are no results
@@ -166,8 +166,6 @@ class CsvSpider(Master):
             l.add_value('on_site_date', ddate)
         except Exception as e:
             print(e)
-        # url_categories = re.search(r('ties/(.+)/(.+)/'), response.url)
-        # xcategories = (url_categories.group(1), url_categories.group(2))
 
         l.replace_value('category_major', response.meta.get('xcategories')[0])
         l.replace_value('category_minor', response.meta.get('xcategories')[1])
