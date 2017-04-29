@@ -42,7 +42,7 @@ class Deals(DeclarativeBase):
         'construction_year', Integer, nullable=True)
     category_major = Column('category_major', String, nullable=True)
     category_minor = Column('category_minor', String, nullable=True)
-    fulltext = Column('fulltext', String)
+    fulltext_html = Column('fulltext', String)
     last_update_num = Column('last_update_num', Integer, nullable=True)
     updated_date = Column('updated_date', DateTime, nullable=True)
 

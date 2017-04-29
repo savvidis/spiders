@@ -20,6 +20,8 @@ import json
 import codecs
 from collections import OrderedDict
 from geopy.geocoders import Nominatim, GoogleV3, GeoNames
+from pyauctions.auctions.auctionapp.models import Auction
+import pdb
 
 
 class JsonWithEncodingPipeline(object):
@@ -28,6 +30,8 @@ class JsonWithEncodingPipeline(object):
         self.file = codecs.open('data_utf8.json', 'w', encoding='utf-8')
 
     def process_item(self, item, spider):
+        print "json"
+        print item
         line = json.dumps(OrderedDict(
             item), ensure_ascii=False, sort_keys=False) + "\n"
         self.file.write(line)
@@ -35,6 +39,51 @@ class JsonWithEncodingPipeline(object):
 
     def close_spider(self, spider):
         self.file.close()
+
+
+def convert_type(k, v):
+    if k[-3:] != "num":
+        return v
+    try:
+        if '.' in v:
+            v = float(v)
+        else:
+            v = int(v)
+        return v
+    except:
+        return v
+
+
+class DjangoPipeline(object):
+
+    def process_item(self, item, spider):
+        try:
+            auction = Auction.objects.get(unique_id=item["unique_id"])
+            print "Question already exist"
+            item['imported_date'] = None
+            for k, v in item.items():
+                if v:
+                    v = convert_type(k, v)
+                    setattr(auction, k, v)
+            auction.save()
+            return item
+        except Auction.DoesNotExist:
+            pass
+        except Exception as e:
+            print "problem saving"
+            print e
+            pdb.set_trace()
+            return item
+        auction = Auction()
+        for k, v in item.items():
+            setattr(auction, k, v)
+        try:
+            auction.save()
+            print "New Question Saved"
+        except Exception as e:
+            print e
+            pdb.set_trace()
+        return item
 
 
 class AuctionsPipeline(object):
@@ -54,23 +103,26 @@ class AuctionsPipeline(object):
         This method is called for every item pipeline component.
 
         """
+        try:
+            pass
+        except Exception as e:
+            raise e
         session = self.Session()
-        print(item)
+        print 'in pipeline', item
         deal = Deals(**item)
 
         try:
             ret = session.query(exists().where(
                 Deals.url == item['url'])).scalar()
-            print(ret)
             if not ret:
                 session.add(deal)
-                print("added to DB")
+                print("--------------------  > added to DB")
                 session.commit()
             else:
                 print("exists !!")
-        except:
+        except Exception as e:
+            raise e
             session.rollback()
-            raise
         finally:
             session.close()
         return item

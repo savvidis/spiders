@@ -72,7 +72,7 @@ class CsvSpider(Master):
         'http://realestate.capital.gr/properties/']
     # My settings
 
-    def __init__(self):
+    def __init__(self, **kwargs):
         changetor()
         print('Start')
         self.source_xpaths = capital

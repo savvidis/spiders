@@ -19,7 +19,7 @@ class PropertiesItem(Item):
     img_url = Field()
     on_site_date = Field()
     views_num = Field()
-    construction_num = Field()
+    construction_year = Field()
     category_major = Field()
     category_minor = Field()
     fulltext = Field()
@@ -56,9 +56,37 @@ class PropertiesItem(Item):
     contact_mobile = Field()
     contact_email = Field()
     contact_website = Field()
-
+    contact_ln = Field()
+    contact_lt = Field()
     # Housekeeping fields
     url = Field()
     spider = Field()
     source = Field()
     imported_date = Field()
+
+    # Ohter
+    imgs = Field()
+    features = Field()
+    geo = Field()
+
+
+class BnbtutorialItem(Item):
+    rev_count = Field()
+    amenities = Field()
+    host_id = Field()
+    hosting_id = Field()
+    room_type = Field()
+    price = Field()
+    bed_type = Field()
+    person_capacity = Field()
+    cancel_policy = Field()
+    rating_communication = Field()
+    rating_cleanliness = Field()
+    rating_checkin = Field()
+    satisfaction_guest = Field()
+    instant_book = Field()
+    accuracy_rating = Field()
+    response_time = Field()
+    response_rate = Field()
+    nightly_price = Field()
+    url = Field()

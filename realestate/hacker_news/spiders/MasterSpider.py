@@ -43,18 +43,14 @@ class Master(CrawlSpider):
     def fill_from_Json(self, l):
         xdic = self.source_xpaths
         for name in xdic.keys():
-            # print name
             if xdic[name] != '':
-                # print name
                 if name[-4:] and name[-4:] == "html":
-                    print("eimai edo0")
                     try:
                         l.add_xpath(name, xdic[name])
                     except Exception as e:
-                        print e
+                        print "In Html", e
 
                 if name[-3:] and name[-3:] == "num":
-                    print("eimai edo1")
                     try:
                         l.add_xpath(name, xdic[name],
                                     MapCompose(
@@ -63,7 +59,6 @@ class Master(CrawlSpider):
                     except Exception as e:
                         print e
                 elif name[-4:] and name[-4] == "date":
-                    print("eimai edo2")
 
                     l.add_xpath(name, xdic[name],
                                 MapCompose(
@@ -86,6 +81,5 @@ class Master(CrawlSpider):
     def entry_exists(self, Deals, url):
         self.Session = sessionmaker(bind=db_connect())
         ret = self.Session().query(exists().where(Deals.url == url)).scalar()
-        print(ret)
         self.Session().close()
         return ret

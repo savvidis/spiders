@@ -30,14 +30,14 @@ class SpitoSpider(Master):
 
     xtypes = [
         "residential",
-        "land",
-        "new-residential",
-        "commercial"
+        # "land",
+        # "new-residential",
+        # "commercial"
     ]
 
     transactions = [
         "sale",
-        "rent"
+        # "rent"
     ]
 
     # My settings
@@ -54,7 +54,7 @@ class SpitoSpider(Master):
 
         for xtype in self.xtypes:
             for tran in self.transactions:
-                for i in xrange(10, 110):                  # LIMIT CATEGORIES
+                for i in xrange(104, 105):                  # LIMIT CATEGORIES
                     url = "http://www.homegreekhome.com/en/search/results/" + \
                         xtype + "/" + tran + "/r" + \
                         str(i) + "/m" + str(i) + "m/"
@@ -72,30 +72,28 @@ class SpitoSpider(Master):
         if last_page_number:
             last_page_number = int(last_page_number[0])
             try:
-                offset_pages = min(2, last_page_number /
-                                   2)            # MIN PAGES
+                offset_pages = min(1, last_page_number / 10)
             except Exception as e:
                 print(e)
 
-        for j in range(0, offset_pages + 1):
+        for j in range(offset_pages, 0, -1):
             if j == 0:
                 yield Request(response.url, callback=self.parse_listing_results_page)
             else:
                 last_part = "offset_" + str(int(j) * 10) + "/"
                 new_url = response.url + last_part
                 print(new_url)
-                try:
-                    yield Request(new_url, callback=self.parse_listing_results_page)
-                except Exception as e:
-                    print(e)
+                yield Request(new_url, callback=self.parse_listing_results_page)
 
     def parse_listing_results_page(self, response):
         # Get item URLs and yield Requests
-        print("here")
-        page_urls = response.xpath(
-            '//*[@id="searchDetailsListings"]/div[1]/div/a/@href').extract()
+        print("search page results")
+        hxs = Selector(response)
+        page_urls = hxs.xpath(
+            '//h4[contains(@class,"searchListing_title")]//a/@href').extract()
         for url in page_urls:
-            print(url)
+            print page_urls
+            print url
             if re.search('(.+)?', url):
                 nurl = re.search('(.+)?', url).group(1)
             else:
@@ -128,23 +126,32 @@ class SpitoSpider(Master):
             print('exception->', e)
         print('1')
         for node in response.css('div.padding-phone-only > .padding-small-top'):
-            title = node.xpath('div[1]/h6/text()').extract()
+            try:
+                title = node.xpath('div[1]/h6/text()').extract()
+            except Exception as e:
+                print 1, e
             print('title:', title)
-            val = node.xpath('div[2]/text()').extract()
-            if "code" in title[0]:
-                l.add_value('unique_id', val[0],
-                            MapCompose(unicode.strip, unicode.title))
-            if "Bedrooms" in title[0]:
-                l.add_value('property_rooms_num', val[0],
-                            MapCompose(unicode.strip, unicode.title))
-            if "Construction" in title[0]:
-                l.add_value('construction_year', val[0],
-                            MapCompose(unicode.strip, unicode.title))
-            if "Modified" in title[0]:
-                l.add_value('on_site_date', node.xpath('div[2]/time/text()').extract()[0],
-                            MapCompose(
-                    lambda i: parse(i, fuzzy=True)))
-                print(node.xpath('div[2]/time/text()').extract())
+            try:
+                val = node.xpath('div[2]/text()').extract()
+            except Exception as e:
+                print 2, e
+            try:
+                if "code" in title[0]:
+                    l.add_value('unique_id', val[0],
+                                MapCompose(unicode.strip, unicode.title))
+                if "Bedrooms" in title[0]:
+                    l.add_value('property_rooms_num', val[0],
+                                MapCompose(unicode.strip, unicode.title))
+                if "Construction" in title[0]:
+                    l.add_value('construction_num', val[0],
+                                MapCompose(unicode.strip, unicode.title))
+                if "Modified" in title[0]:
+                    l.add_value('on_site_date', node.xpath('div[2]/time/text()').extract()[0],
+                                MapCompose(
+                        lambda i: parse(i, fuzzy=True)))
+                    print(node.xpath('div[2]/time/text()').extract())
+            except Exception as e:
+                print 3, e
         print('2')
         # Housekeeping fields
         l.add_value('url', response.url)
