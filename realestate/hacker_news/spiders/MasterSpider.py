@@ -40,6 +40,10 @@ class Master(CrawlSpider):
             changetor()
             self.tor_update_time = datetime.now()
 
+    @classmethod
+    def changeip(self):
+        changetor()
+
     def fill_from_Json(self, l):
         xdic = self.source_xpaths
         for name in xdic.keys():

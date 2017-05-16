@@ -41,24 +41,27 @@ USER_AGENT = "Mozilla/5.0 (Linux; U; Android 4.0.3; de-ch; HTC Sensation Build/I
 DOWNLOADER_MIDDLEWARES = {
     'scrapy.downloadermiddlewares.redirect.RedirectMiddleware': 1,
     'hacker_news.middleware.RotateUserAgentMiddleware': 100,
-    # 'hacker_news.middleware.ProxyMiddleware': 400,
+    'hacker_news.middleware.ProxyMiddleware': 200,
     #    'misc.middleware.CustomUserAgentMiddleware': 401,
-    'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None
+    # 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None
 }
 
 ITEM_PIPELINES = {
     # 'hacker_news.pipelines.JsonWithEncodingPipeline': 200,
     'hacker_news.pipelines.DjangoPipeline': 200,
+    # 'hacker_news.pipelines.CsvPipeline': 220,
+
+
     # 'hacker_news.pipelines.LocationPipeline': 200,
     # 'hacker_news.pipelines.AuctionsPipeline': 500,
     # 'hacker_news.pipelines.CalcPipeline': 341,
 }
 EXTENSIONS = {'hacker_news.latencies.Latencies': 520, }
-LATENCIES_INTERVAL = 5
+LATENCIES_INTERVAL = 1
 
 LOG_LEVEL = 'DEBUG'
 
-DOWNLOAD_DELAY = 4
+DOWNLOAD_DELAY = 2
 LOG_FILE = "Aircrawler.log"
 # DEPTH_PRIORITY = 1
 # SCHEDULE_DISK_QUEUE = 'scrapy.squeue.PickleFifoDiskQueue'
@@ -68,7 +71,7 @@ CONCURRENT_REQUESTS_PER_DOMAIN = 1
 
 AUTOTHROTTLE_ENABLED = True
 # The initial download delay
-AUTOTHROTTLE_START_DELAY = 5
+AUTOTHROTTLE_START_DELAY = 1
 # The maximum download delay to be set in case of high latencies
 AUTOTHROTTLE_MAX_DELAY = 60
 # Enable showing throttling stats for every response received:

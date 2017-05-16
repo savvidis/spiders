@@ -20,8 +20,9 @@ import json
 import codecs
 from collections import OrderedDict
 from geopy.geocoders import Nominatim, GoogleV3, GeoNames
-from pyauctions.auctions.auctionapp.models import Auction
+from pyauctions.auctions.auctionapp.models import Auction, POI, Explore
 import pdb
+from scrapy.exporters import CsvItemExporter
 
 
 class JsonWithEncodingPipeline(object):
@@ -41,6 +42,22 @@ class JsonWithEncodingPipeline(object):
         self.file.close()
 
 
+class CsvPipeline(object):
+
+    def __init__(self):
+        self.file = open("discover.csv", 'wb')
+        self.exporter = CsvItemExporter(self.file, unicode)
+        self.exporter.start_exporting()
+
+    def close_spider(self, spider):
+        self.exporter.finish_exporting()
+        self.file.close()
+
+    def process_item(self, item, spider):
+        self.exporter.export_item(item)
+        return item
+
+
 def convert_type(k, v):
     if k[-3:] != "num":
         return v
@@ -57,24 +74,26 @@ def convert_type(k, v):
 class DjangoPipeline(object):
 
     def process_item(self, item, spider):
+        Model_Use = Auction
         try:
-            auction = Auction.objects.get(unique_id=item["unique_id"])
+            auction = Model_Use.objects.get(
+                unique_id=item["unique_id"],
+                property_area_num=item["property_area_num"],
+                price_num=item["price_num"])
             print "Question already exist"
-            item['imported_date'] = None
             for k, v in item.items():
                 if v:
                     v = convert_type(k, v)
                     setattr(auction, k, v)
             auction.save()
             return item
-        except Auction.DoesNotExist:
+        except Model_Use.DoesNotExist:
             pass
         except Exception as e:
             print "problem saving"
             print e
-            pdb.set_trace()
             return item
-        auction = Auction()
+        auction = Model_Use()
         for k, v in item.items():
             setattr(auction, k, v)
         try:
@@ -82,7 +101,6 @@ class DjangoPipeline(object):
             print "New Question Saved"
         except Exception as e:
             print e
-            pdb.set_trace()
         return item
 
 

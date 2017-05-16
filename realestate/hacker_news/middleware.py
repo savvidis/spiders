@@ -8,6 +8,7 @@ from settings import *
 from scrapy.contrib.downloadermiddleware.useragent import UserAgentMiddleware
 from scrapy.exceptions import IgnoreRequest
 from scrapy import log
+from hacker_news.torchange import changetor
 
 
 class ProxyMiddleware(object):
@@ -32,8 +33,6 @@ class RotateUserAgentMiddleware(UserAgentMiddleware):
         ua = random.choice(self.mobile_user_agent_list)
         if ua:
             request.headers.setdefault('User-Agent', ua)
-            print "User Agent New ===="
-            print(ua)
             # Add desired logging message here.
             spider.log(
                 u'User-Agent: {} {}'.format(
